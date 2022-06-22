@@ -6,7 +6,7 @@ const {mongoose} = require('./db.js');
 
 const account=require('./routes/account.js');
 const customer=require('./routes/customer.js')
-
+const transaction=require('./routes/transaction.js')
 
 const app = express();
 app.use(bodyparser.json());
@@ -14,3 +14,4 @@ app.use(bodyparser.json());
 app.listen(3000, ()=>console.log('server started at port: 3000'));
 app.use('/account',account);
 app.use('/customer',customer)
+app.use('/transaction',transaction)

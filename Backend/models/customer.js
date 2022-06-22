@@ -5,10 +5,7 @@ const mongoose=require('mongoose')
      email:{type:String},
      password:{type:Number},
      phone_no:{type:Number},
-     address : [
-        "city:{type:String}",
-        "state:{type:String}",
-        "pincode:{type:Number}"
-           ]
+     address : {type:String}
+       
       });
  module.exports={Customer};

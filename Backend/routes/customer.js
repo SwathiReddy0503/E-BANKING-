@@ -9,7 +9,7 @@ const {Customer}=require('../models/customer');
 router.get('/:cust_id',(req,res)=>{
     const{cust_id}=req.params;
     
-     Customer.findOne({account_no},function(err,data){
+     Customer.findOne({cust_id},function(err,data){
         if(err){
             console.log('Error i Post Data'+err)
        }
@@ -60,7 +60,7 @@ router.post('/',(req,res)=>{
 
     router.put('/:cust_id',function(req,res){
     const {cust_id}=req.params;
-     Customer.findOneAndUpdate({account_no},req.body,function(err,data){
+     Customer.findOneAndUpdate({cust_id},req.body,function(err,data){
         if(err){
             console.log('Error in get employee by id'+err)
        }
